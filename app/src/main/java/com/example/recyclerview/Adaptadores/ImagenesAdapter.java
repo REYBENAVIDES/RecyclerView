@@ -1,6 +1,7 @@
 package com.example.recyclerview.Adaptadores;
 
 import android.content.Context;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -21,6 +22,7 @@ public class ImagenesAdapter  extends RecyclerView.Adapter<ImagenesViewHolder>{
     private Context Ctx;
     private ArrayList<String> lstimagenes;
     public ImagenesAdapter(Context mCtx, ArrayList<String> imagenes) {
+        Log.i("rrrrrrrr",imagenes.get(0));
         this.lstimagenes = imagenes;
         Ctx=mCtx;
     }
@@ -54,6 +56,6 @@ class ImagenesViewHolder extends RecyclerView.ViewHolder {
     ImageView imegem;
     public ImagenesViewHolder(@NonNull View itemView) {
         super(itemView);
-        imegem=itemView.findViewById(R.id.crvGaleria);
+        imegem=itemView.findViewById(R.id.imgGaleria);
     }
 }

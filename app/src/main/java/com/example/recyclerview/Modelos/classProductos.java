@@ -61,9 +61,10 @@ public class classProductos {
         discripcion=jsonObject.getString("description");
         imagen=jsonObject.getString("thumbnail");
         JSONArray jsonArray =jsonObject.getJSONArray("images");
-        List<String> lista=new ArrayList<>();
+        ArrayList<String> lista=new ArrayList<>();
         for(int y=0;y<jsonArray.length();y++)
             lista.add(jsonArray.getString(y));
+        lstImagen=lista;
     }
 
 

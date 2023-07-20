@@ -2,6 +2,7 @@ package com.example.recyclerview;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.DefaultItemAnimator;
+import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -24,7 +25,7 @@ public class imagenes extends AppCompatActivity {
             //
             recyclerView = (RecyclerView) findViewById(R.id.resultados);
             recyclerView.setHasFixedSize(true);
-            recyclerView.setLayoutManager(new LinearLayoutManager(this));
+            recyclerView.setLayoutManager(new GridLayoutManager(this,2));
             recyclerView.setItemAnimator(new DefaultItemAnimator());
             //
             ImagenesAdapter imagenesAdapter = new ImagenesAdapter(this, bundle.getStringArrayList("IMAGENES"));
